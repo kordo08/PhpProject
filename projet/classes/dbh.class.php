@@ -11,7 +11,7 @@
   {
     try{
         $dsn = "pgsql:host=$this->host;port=5432;dbname=$this->dbname;user=$this->username;password=$this->password";
-        $pdo = new PDO($dsn);
+        $pdo = new PDO($dsn, $this->user, $this->password);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
