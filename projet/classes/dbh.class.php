@@ -1,10 +1,10 @@
 <?php
  
  class dbh{
-  private $host="ec2-34-200-72-77.compute-1.amazonaws.com";
-  private $user="lbwymdnqknqhau";
-  private $password="88431a880f5b3fe88f9d071d0c72d335628cd8a25331af024cea065029d6acf9";
-  private $dbName="d6bplr9hrnmj0j";
+  private $host="ec2-52-44-166-58.compute-1.amazonaws.com";
+  private $user="qyibhmxopyddza";
+  private $password="a5302718426dba13dabab2c95c30e562660027a2323ed9b1463888fb53fc889c";
+  private $dbName="d8688apcrq2s88";
   private $port = "5432";
 
   protected function connect()
