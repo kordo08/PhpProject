@@ -25,5 +25,5 @@ $date = "11-09-1998";
 $id_user ='3';
             
  $req1="INSERT INTO niveaux VALUES ('' ,1,true,false,0.0,$id_user);";
-$db->execute($req1);
+$db->execute([$req1]);
 ?>
