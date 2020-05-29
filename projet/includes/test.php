@@ -22,9 +22,9 @@ $username = "rayen";
 $password = "hiori";
 $email = "ho_frioui@esi.dz";
 $date = "11-09-1998";
-$sexe = "h";
+$id_user =1;
             
-$inser = $db->query("insert into utilisateurs (username,sexe,date_naissance,email,password) values 
-('$username', '$sexe', '$date' , '$email' , '$password' )");
+$q_user = "DELETE FROM  utilisateurs WHERE id_user=$id_user";
+$connexion->exec($q_user); 
 
 ?>
