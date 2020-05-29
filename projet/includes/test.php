@@ -22,9 +22,9 @@ $username = "rayen";
 $password = "hiori";
 $email = "ho_frioui@esi.dz";
 $date = "11-09-1998";
-$id_user =2;
+$id_user =3;
             
-$q_user = "DELETE FROM  utilisateurs WHERE id_user=$id_user";
+$q_user =query("INSERT INTO niveaux VALUES ('' ,1,true,false,0.0,'$id_user');");
 $db->exec($q_user); 
 
 ?>
