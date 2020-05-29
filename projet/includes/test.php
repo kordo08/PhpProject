@@ -24,7 +24,7 @@ $email = "ho_frioui@esi.dz";
 $date = "11-09-1998";
 $id_user =3;
            
-$inser =$db->query("INSERT INTO niveaux VALUES (,1,true,false,0.0,$id_user),
-                                               (,2,false,false,0.0,$id_user),
-                                              (,3,false,false,0.0,$id_user);");
+$inser =$db->query("INSERT INTO niveaux VALUES (1,1,true,false,0.0,$id_user),
+                                               (3,2,false,false,0.0,$id_user),
+                                              (3,3,false,false,0.0,$id_user);");
 ?>
