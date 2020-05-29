@@ -19,6 +19,7 @@
       catch (PDOException $e) {
      echo "oooops sorry something went wrong with the connection :( <br>".$e->getMessage();
       }
+   return $pdo; 
     }
 }
         ?>
