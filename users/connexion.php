@@ -28,7 +28,7 @@ $port = "5432";
        
         $id_user=$_POST['id_user'];
         
-          $req1=$db->query('SELECT id_niveau,num_niveau,etat_niveau,eval_niv FROM niveaux WHERE id_user="'.$id_user.'"');
+          $req1=$db->query("SELECT id_niveau,num_niveau,etat_niveau,eval_niv FROM niveaux WHERE id_user='$id_user'");
           while($rows1=$req1->fetch()){
            switch ($rows1['num_niveau'])
             {

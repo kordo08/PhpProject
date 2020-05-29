@@ -39,7 +39,7 @@ if(isset($_POST)){
         }
         else
         {
-            $requete = $db->query('SELECT id_user FROM utilisateurs WHERE username = "'.$username.'"');
+            $requete = $db->query("SELECT id_user FROM utilisateurs WHERE username = '$username'");
             
             $row = $requete->fetch();
         if(!$row)
@@ -49,7 +49,7 @@ if(isset($_POST)){
         } // Vérification du password
         else{
 
-             $requete = $db->query('SELECT id_user FROM utilisateurs WHERE username = "'.$username.'" AND password = "'.$password.'" ');
+             $requete = $db->query("SELECT id_user FROM utilisateurs WHERE username = '$username' AND password='$password'");
             
             $row = $requete->fetch();
         if(!$row)
@@ -58,7 +58,7 @@ if(isset($_POST)){
             $results['message'] = "mot de passe incorrect";
 
         }else{
-          $requete = $db->query('SELECT id_user FROM utilisateurs WHERE username = "'.$username.'" AND password = "'.$password.'" ');
+          $requete = $db->query("SELECT id_user FROM utilisateurs WHERE username = '$username' AND password = '$password'");
             
             $row = $requete->fetch();
         

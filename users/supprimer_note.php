@@ -25,9 +25,9 @@ $port = "5432";
                        
                          $id_note=$_POST['id_note'];
         
-                         $del_note= $db->query('DELETE FROM bloc_note WHERE id_note="'.$id_note.'"');
+                         $del_note= $db->query("DELETE FROM bloc_note WHERE id_note='$id_note'");
                          
-                         $tst=$db->query('SELECT note FROM bloc_note WHERE id_note="'.$id_note.'" ');
+                         $tst=$db->query("SELECT note FROM bloc_note WHERE id_note='$id_note'");
                           $tab= $tst->fetchALL();
                                    $taille=count($tab);
                                   if($taille ==0){

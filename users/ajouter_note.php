@@ -28,9 +28,9 @@ $port = "5432";
             $note=$_POST['note'];
             $num_note=$_POST['num_note'];
             
-            $add_note= $db->query("INSERT INTO bloc_note VALUES ('' ,'.$num_note.','$note','.$id_user.')");
+            $add_note= $db->query("INSERT INTO bloc_note VALUES ('' ,'$num_note','$note','$id_user')");
             
-            $req_id = $db->query('SELECT id_note FROM bloc_note WHERE note = "'.$note.'"AND num_note = "'.$num_note.'" ');
+            $req_id = $db->query("SELECT id_note FROM bloc_note WHERE note = '$note' AND num_note = '$num_note' ");
              $row = $req_id->fetch();
               $id=$row['id_note'];
                                    if($id != 0)

@@ -27,7 +27,7 @@ $port = "5432";
                 {
                      $id_user = $_POST['id_user'];
                      
-            $select = $db->query('SELECT username,sexe,date_naissance,email,password FROM utilisateurs WHERE id_user="'.$id_user.'"');
+            $select = $db->query("SELECT username,sexe,date_naissance,email,password FROM utilisateurs WHERE id_user='$id_user'");
            
              $row = $select->fetch();
 

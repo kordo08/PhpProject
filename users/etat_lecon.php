@@ -20,7 +20,7 @@
              
             $id_th=$_POST['id_theme'];
       
-              $req=$db->query('SELECT id_cours,titre_cours,etat_lecon,eval_lecon FROM cours WHERE  id_theme = "'.$id_th.'"');
+              $req=$db->query("SELECT id_cours,titre_cours,etat_lecon,eval_lecon FROM cours WHERE  id_theme = '$id_th'");
               $tab_cours=$req->fetchAll();
               
            }

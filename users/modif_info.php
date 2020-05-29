@@ -53,8 +53,8 @@ $port = "5432";
                                 $results['message']="votre pseudo ne doit pas contenir d'éspaces ou de signes de ponctuations" ;
                              }
                              else{
-                                   $rcp = $db->query('SELECT password FROM utilisateurs WHERE id_user != "'.$id_user.'" AND
-                                                     username= "'.$username.'"');
+                                   $rcp = $db->query("SELECT password FROM utilisateurs WHERE id_user != '$id_user' AND
+                                                     username='$username'");
                                    $tab= $rcp->fetchALL();
                                    $taille=count($tab);
                                   if($taille !=0){
@@ -65,10 +65,10 @@ $port = "5432";
                                   }
                                   else{
                                     // nouveau pesudo n'existe pas dans la table  
-                                    $rcp1 = $db->query('UPDATE utilisateurs SET username="'.$username.'",sexe ="'.$sexe.'",
-                                                       date_naissance="'.$date.'",email="'.$email.'",password="'.$password.'"
-                                                       WHERE id_user="'.$id_user.'"');
-                                     $req_id = $db->query('SELECT id_user FROM utilisateurs WHERE username = "'.$username.'"');
+                                    $rcp1 = $db->query("UPDATE utilisateurs SET username='$username',sexe ='$sexe',
+                                                       date_naissance='$date',email='$email',password='$password'
+                                                       WHERE id_user='$id_user'");
+                                     $req_id = $db->query("SELECT id_user FROM utilisateurs WHERE username = '$username'");
                                      $row = $req_id->fetch();
                                       $id=$row['id_user'];
                                       if($id == $id_user)

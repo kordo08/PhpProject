@@ -26,7 +26,7 @@
    if(isset($_POST)){
              if(!empty($_POST['id_niveau'])){
             $id_niv=$_POST['id_niveau'];
-                $req=$db->query('SELECT id_theme,titre_theme,etat_theme,eval_theme FROM themes WHERE  id_niveau = "'.$id_niv.'"');
+                $req=$db->query("SELECT id_theme,titre_theme,etat_theme,eval_theme FROM themes WHERE  id_niveau = '$id_niv'");
                 while($rows=$req->fetch())
                     {
                         switch ($rows['titre_theme'])
@@ -115,7 +115,7 @@
                          }
                     }
 
-                  $testniveau=$db->query('SELECT * FROM niveaux WHERE  id_niveau = "'.$id_niv.'"');
+                  $testniveau=$db->query("SELECT * FROM niveaux WHERE  id_niveau = '$id_niv'");
                   $etat_test=$testniveau->fetch();
                   if($etat_test["etat_test_niveau"]==0){$results["test"]="blocked";}
                   else{$results["test"]="unblocked";}

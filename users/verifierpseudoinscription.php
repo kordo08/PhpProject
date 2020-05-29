@@ -42,7 +42,7 @@ if(isset($_POST)){
 
         }else{ 
 
-           $requete = $db->query('SELECT id_user FROM utilisateurs WHERE username = "'.$username.'"');
+           $requete = $db->query("SELECT id_user FROM utilisateurs WHERE username = '$username'");
             
             $row = $requete->fetch();
         if($row)

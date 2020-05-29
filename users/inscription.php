@@ -29,9 +29,9 @@ $port = "5432";
                       $date = $_POST['date'];
                        $sexe = $_POST['sexe'];
             
-            $inser = $db->query('INSERT INTO utilisateurs(username,sexe,date_naissance,email,password)
-                                VALUES ("'.$username.'" ,"'.$sexe.'","'.$date.'","'.$email.  '","'.$password.'")');
-            $req_id = $db->query('SELECT id_user FROM utilisateurs WHERE username = "'.$username.'"');
+            $inser = $db->query("INSERT INTO utilisateurs(username,sexe,date_naissance,email,password)
+                                VALUES ('$username' ,'$sexe','$date','$email','$password')");
+            $req_id = $db->query("SELECT id_user FROM utilisateurs WHERE username = '$username'");
              $row = $req_id->fetch();
               $id=$row['id_user'];
                                    if($id != 0)

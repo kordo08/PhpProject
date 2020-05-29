@@ -21,7 +21,7 @@
            {
             $id_user=$_POST['id_user'];
               
-               $req=$db->query('SELECT num_note,note,id_note FROM bloc_note WHERE id_user="'.$id_user.'"');
+               $req=$db->query("SELECT num_note,note,id_note FROM bloc_note WHERE id_user='$id_user'");
                 $tab_note= $req->fetchALL();
            }
            else{

@@ -28,7 +28,7 @@ $port = "5432";
                      $password2=$_POST['newpassword'];
                      $password22=$_POST['newpasswordconf'];
      
-                        $req1=$db->query('SELECT password FROM utilisateurs WHERE id_user = "'.$id_user.'"');
+                        $req1=$db->query("SELECT password FROM utilisateurs WHERE id_user = '$id_user'");
                         $row1= $req1->fetch();
                         $an_pass=$row1['password'];
                         if(strcmp($an_pass,$password1)!=0)
@@ -52,9 +52,9 @@ $port = "5432";
                                        $results['message'] = "Les deux saisies du nouveau mot de passe ne sont pas identiques"; 
                                     }
                                     else{
-                                        $rcp1 = $db->query('UPDATE utilisateurs SET password="'.$password22.'"
-                                                           WHERE id_user="'.$id_user.'"');
-                                       $req_pas = $db->query('SELECT password FROM utilisateurs WHERE id_user = "'.$id_user.'"');
+                                        $rcp1 = $db->query("UPDATE utilisateurs SET password='$password22'
+                                                           WHERE id_user='$id_user'");
+                                       $req_pas = $db->query("SELECT password FROM utilisateurs WHERE id_user = '$id_user'");
                                        $row = $req_pas->fetch();
                                        $pas=$row['password'];
                                       if(strcmp($pas,$password22)==0)
