@@ -24,7 +24,7 @@ $email = "ho_frioui@esi.dz";
 $date = "11-09-1998";
 $id_user =2;
             
-$q_user = "DELETE FROM  utilisateurs WHERE id_user='$id_user'";
+$q_user = "DELETE FROM  utilisateurs WHERE id_user=$id_user";
 $db->exec($q_user); 
 
 ?>
