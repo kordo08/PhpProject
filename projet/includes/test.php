@@ -17,6 +17,6 @@ $port = "5432";
      catch (PDOException $e) {
     echo "oooops sorry something went wrong with the connection :( <br>".$e->getMessage();
      }
-$inser =$db->query("INSERT INTO niveaux (num_niveau ,etat_niveau ,etat_test_niveau, eval_niv ,id_user) 
-                                           VALUES (2,TRUE,TRUE,0.0,1);");
+ $req222=$db->query("INSERT INTO themes VALUES ('' ,'circulation',false,0.0,'url_vedio',2),
+                                                            ('' ,'divers',false,0.0,'url_vedio',2);");
 ?>
