@@ -17,7 +17,6 @@ $port = "5432";
      catch (PDOException $e) {
     echo "oooops sorry something went wrong with the connection :( <br>".$e->getMessage();
      }
-$req1=$db->query("INSERT INTO niveaux VALUES ('' ,1,true,false,0.0,1),
-                                               ('' ,2,false,false,0.0,1),
-                                              ('' ,3,false,false,0.0,1);");
+$inser = $db->query("INSERT INTO utilisateurs (username,sexe,date_naissance,email,password) VALUES
+            ('Bayen','h','2017/12/3','ib_frioui@esi.dz','hiori1234')");
 ?>
