@@ -18,5 +18,5 @@ $port = "5432";
     echo "oooops sorry something went wrong with the connection :( <br>".$e->getMessage();
      }
 $inser =$db->query("INSERT INTO niveaux (id_niveau,num_niveau ,etat_niveau ,etat_test_niveau, eval_niv ,id_user) 
-                                           VALUES (1,1,TRUE,TRUE,0.0,1);");
+                                           VALUES ('',1,TRUE,TRUE,0.0,1);");
 ?>
