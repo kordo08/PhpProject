@@ -18,8 +18,8 @@
  
 $id_user =1;            
 $rcp_id1 = $pdo->query("SELECT username FROM utilisateurs WHERE id_user='$id_user'");
-$tab=$rcp_id1->fetch();
+$tab=$rcp_id1->fetchAll();
 
-echo json_encode($tab['username']);
+echo json_encode($tab[0]['username']);
 
 ?>
