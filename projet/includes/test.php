@@ -19,7 +19,8 @@
 $id_user =1; 
 $inser = $db->query("INSERT INTO utilisateurs (username,sexe,date_naissance,email,password) VALUES
             ('Bayen','f','2000/08/09','ib_frioui@esi.dz','hiori1234')");
-$req1=$db->query("INSERT INTO niveaux (num_niveau ,etat_niveau ,etat_test_niveau, eval_niv ,id_user) VALUES (1,true,false,0.0,'$id_user'),
+
+  $req1=$db->query("INSERT INTO niveaux (num_niveau ,etat_niveau ,etat_test_niveau, eval_niv ,id_user) VALUES (1,true,false,0.0,'$id_user'),
                                                (2,false,false,0.0,'$id_user'),
                                               (3,false,false,0.0,'$id_user');");
    $rcp_id1 = $db->query("SELECT id_niveau FROM niveaux WHERE num_niveau = 1 AND id_user= '$id_user'");
@@ -73,7 +74,7 @@ $req4=$db->query("INSERT INTO cours (titre_cours
 $req5=$db->query("INSERT INTO cours (titre_cours
 ,etat_lecon,eval_lecon,id_theme) VALUES ('Categorie B',false,0,'$id_th'),
                                            ('L\'eclerage',false,0,'$id_th'),
-                                           ('Urgences, bus et véhicules encombrants',false,0,'$id_th'); ");
+                                           ('Urgences, bus et véhicules encombrants',false,0,'$id_th');");
                                             
                  
                  
@@ -86,7 +87,7 @@ $id_th=$id_th+1;
 
  $re6=$db->query("INSERT INTO cours (titre_cours
 ,etat_lecon,eval_lecon,id_theme) VALUES ('obligation',false,0,'$id_th'),
-                                           ('interdiction',false,0,'$id_th'); ");
+                                           ('interdiction',false,0,'$id_th');");
                                                                                                         
                 
 //theme5
@@ -100,7 +101,7 @@ $id_th=$id_th+1;
  $req8=$db->query("INSERT INTO cours (titre_cours
 ,etat_lecon,eval_lecon,id_theme) VALUES ('La vitesse',false,0,'$id_th'),
                                             ('Les distances de sécurité',false,0,'$id_th'),
-                                            ('L\'arrêt et le stationnement',false,0,'$id_th');  ");
+                                            ('L\'arrêt et le stationnement',false,0,'$id_th');");
                                           
  //theme7
  $id_th=$id_th+1;
@@ -111,13 +112,13 @@ $id_th=$id_th+1;
 //theme8
 $id_th=$id_th+1;
 $req10=$db->query("INSERT INTO cours (titre_cours
-,etat_lecon,eval_lecon,id_theme) VALUES ('carrfours à sens giratoire',false,0,'$id_th')");
+,etat_lecon,eval_lecon,id_theme) VALUES ('carrfours à sens giratoire',false,0,'$id_th');");
 //theme9
  $id_th=$id_th+1;
 $req11=$db->query("INSERT INTO cours (titre_cours
 ,etat_lecon,eval_lecon,id_theme) VALUES ('Les dépassements',false,0,'$id_th'),
                                             ('La conduite sur autoroute',false,0,'$id_th'),
-                                           ('Conduite en conditions difficiles',false,0,'$id_th') ;");
+                                           ('Conduite en conditions difficiles',false,0,'$id_th');");
                                          
                
                 
