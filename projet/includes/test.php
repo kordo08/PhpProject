@@ -836,6 +836,6 @@ $req12=$db->query("INSERT INTO questions(type_quiz,contenu,image_quiz,reponse,id
   
     
     
- }        
+  
    
 ?>
