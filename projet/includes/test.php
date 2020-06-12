@@ -73,7 +73,7 @@ $req4=$db->query("INSERT INTO cours (titre_cours
  $id_th=$id_th+1;
 $req5=$db->query("INSERT INTO cours (titre_cours
 ,etat_lecon,eval_lecon,id_theme) VALUES ('Categorie B',false,0,'$id_th'),
-                                           /*('L'eclerage',false,0,'$id_th'),*/
+                                           ("L'eclerage",false,0,'$id_th'),*/
                                            ('Urgences, bus et véhicules encombrants',false,0,'$id_th');");
                                             
                  
@@ -101,7 +101,7 @@ $id_th=$id_th+1;
  $req8=$db->query("INSERT INTO cours (titre_cours
 ,etat_lecon,eval_lecon,id_theme) VALUES ('La vitesse',false,0,'$id_th'),
                                             ('Les distances de sécurité',false,0,'$id_th'),
-                                            ('L'arrêt et le stationnement',false,0,'$id_th');");
+                                            ("L'arrêt et le stationnement",false,0,'$id_th');");
                                           
  //theme7
  $id_th=$id_th+1;
