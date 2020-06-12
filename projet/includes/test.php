@@ -18,13 +18,9 @@ $port = "5432";
      catch (PDOException $e) {
     echo "oooops sorry something went wrong with the connection :( <br>".$e->getMessage();
      }
-$id_user ='1';
+$id_user =1;
 
             
 $rcp_id1 = $db->query("SELECT username FROM utilisateurs WHERE id_user='$id_user'");
-$row1 = $rcp_id1->fetch();
-$row1 = json_decode($json, true);
-$id_niv=$row1['username'];
-echo $id_niv;
 
 ?>
