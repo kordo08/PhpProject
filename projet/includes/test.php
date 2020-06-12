@@ -27,5 +27,5 @@ $var=$tab[0]['username'];
 /*echo '</pre>';
 print_r($tab);
 echo '</pre>';*/
-echo $var;
+echo json_encode($var);
 ?>
