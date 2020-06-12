@@ -22,5 +22,8 @@ $id_user =1;
 
             
 $rcp_id1 = $db->query("SELECT username FROM utilisateurs WHERE id_user='$id_user'");
-
+$tab=$rcp_id1->fetchAll();
+echo '</pre>';
+print_r($tab);
+echo '</pre>';
 ?>
