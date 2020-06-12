@@ -23,7 +23,7 @@ $port = "5432";
   $req1=$db->query("INSERT INTO niveaux (num_niveau ,etat_niveau ,etat_test_niveau, eval_niv ,id_user) VALUES (1,true,false,0.0,'$id_user'),
                                                (2,false,false,0.0,'$id_user'),
                                               (3,false,false,0.0,'$id_user');");
-   $rcp_id1 = $db->query("SELECT id_niveau FROM niveaux WHERE num_niveau = 1 && id_user= '$id_user'");
+   $rcp_id1 = $db->query("SELECT id_niveau FROM niveaux WHERE num_niveau = 1 AND id_user= '$id_user'");
      $row1 = $rcp_id1->fetch();
     $id_niv=$row1['id_niveau'];
     
