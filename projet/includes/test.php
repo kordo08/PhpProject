@@ -19,13 +19,10 @@ $port = "5432";
     echo "oooops sorry something went wrong with the connection :( <br>".$e->getMessage();
      }
 $id_user = 1;
-$password = "hiori";
-$email = "ho_frioui@esi.dz";
-$date = "11-09-1998";
-$sexe = "h";
+
             
 $rcp_id1 = $db->query("SELECT username
-FROM utilisateurs WHERE id_user=$id_user");
+FROM utilisateurs WHERE id_user='$id_user'");
 $row1 = $rcp_id1->fetch();
 $id_niv=$row1['username'];
 echo $id_niv;
