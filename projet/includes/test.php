@@ -16,7 +16,9 @@
    echo "oooops sorry something went wrong with the connection :( <br>".$e->getMessage();
  }
  
-$id_user =1;            
+$id_user =1; 
+$inser = $db->query("INSERT INTO utilisateurs (username,sexe,date_naissance,email,password) VALUES
+            ('Bayen','f','2000/08/09','ib_frioui@esi.dz','hiori1234')");
 $req1=$db->query("INSERT INTO niveaux (num_niveau ,etat_niveau ,etat_test_niveau, eval_niv ,id_user) VALUES (1,true,false,0.0,'$id_user'),
                                                (2,false,false,0.0,'$id_user'),
                                               (3,false,false,0.0,'$id_user');");
